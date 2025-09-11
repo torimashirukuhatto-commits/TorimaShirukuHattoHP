@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ニュース一覧</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+    nav {
+      background: #222;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .news-list {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .news-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .news-date {
+      font-size: 0.9em;
+      color: #777;
+    }
+    .news-title {
+      cursor: pointer;
+      font-weight: bold;
+      color: #0066cc;
+    }
+    .news-content {
+      display: none;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">ゲーム紹介</a>
+    <a href="about.html">作った人</a>
+    <a href="contact.html">お問い合わせ</a>
+    <a href="news.html">ニュース</a>
+  </nav>
+
+  <div class="container">
+    <div class="news-list">
+      <h2>ニュース一覧</h2>
+
+      <div class="news-item">
+        <p class="news-date">2025/07/08</p>
+        <p class="news-title" onclick="toggleContent(this)">Webサイト仮オープンのお知らせ</p>
+        <div class="news-content">
+          <p>このたび、ゲーム公式Webサイトを仮オープンいたしました！<br>
+          ゲーム紹介・ダウンロードリンク・制作者情報などをご覧いただけます。<br>
+          今後のアップデート情報もこちらに掲載していきますので、よろしくお願いします。</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <p class="news-date">2025/07/01</p>
+        <p class="news-title" onclick="toggleContent(this)">β版リリース予定のお知らせ</p>
+        <div class="news-content">
+          <p>現在、ゲームβ版の最終調整を行っています。<br>
+          リリース予定日は 2025年7月15日！<br>
+          ぜひお楽しみに！</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <p class="news-date">2025/06/20</p>
+        <p class="news-title" onclick="toggleContent(this)">プレイ動画準備中</p>
+        <div class="news-content">
+          <p>プレイ動画の編集作業に入りました。<br>
+          完成次第、サイトとSNSにて公開予定です。</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+         <p class="news-date">日付</p>
+         <p class="news-title" onclick="toggleContent(this)">タイトル</p>
+         <div class="news-content">
+             <p>詳細文を書きます。<br>改行もOKです。</p>
+            </div>
+        </div>
+
+    </div>
+
+    
+  </div>
+
+        
+
+
+  <script>
+    function toggleContent(titleElement) {
+      const content = titleElement.nextElementSibling;
+      content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

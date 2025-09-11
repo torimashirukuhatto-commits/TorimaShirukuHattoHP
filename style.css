@@ -1,0 +1,107 @@
+/* ==== 基本レイアウト ==== */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, rgb(168, 255, 247), #ffffff); 
+  /* 上は水色 → 下は白にグラデーション */
+  color: #000;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ==== ナビゲーション ==== */
+nav {
+  background: #ffffff;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #0099cc;
+}
+
+/* ==== 見出し ==== */
+h1, h2 {
+  margin-top: 0;
+  color: #0077b6;
+}
+
+/* ==== 動画枠 ==== */
+.video-box {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.video-box iframe.video-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==== ボタン ==== */
+.download-button {
+  display: inline-block;
+  margin: 10px 10px;
+  padding: 10px 20px;
+  background-color: #00b4d8;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.download-button:hover {
+  background-color: #0077b6;
+}
+
+/* ==== お知らせ・汎用ボックス ==== */
+.news, .content-box {
+  margin-top: 30px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.news ul {
+  padding-left: 20px;
+}
+
+.news li {
+  margin-bottom: 10px;
+}
+
+/* ==== レスポンシブ対応 ==== */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  .download-button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
