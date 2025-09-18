@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ガチャ提供割合 - GO!st.</title>
+  <link rel="stylesheet" href="style.css"> <!-- 既存CSSを読み込む -->
+  <style>
+    /* 言語切替リンク */
+    .lang-switch {
+      text-align: right;
+      margin: 10px 20px;
+      font-size: 0.9em;
+    }
+    .lang-switch a {
+      margin-left: 10px;
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .lang-switch a:hover {
+      color: #0099cc;
+    }
+    /* アイテムリスト */
+    #itemList {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    #itemList li {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="provide.html">ガチャ提供割合</a>
+  </nav>
+
+  <!-- 言語切替リンク -->
+  <div class="lang-switch">
+    <a href="provide.html">日本語</a> | 
+    <a href="provide_en.html">English</a>
+  </div>
+
+  <div class="container">
+    <h1>ガチャ提供割合</h1>
+    <div class="content-box">
+      <p>本アプリ「GO!st.」における常設ガチャの提供割合について以下の通り明示します。</p>
+
+      <h2>1. 提供形式</h2>
+      <p>本ガチャは常設で提供され、レアリティ区分はありません。すべてのアイテムは均等な提供割合で排出されます。</p>
+
+      <h2>2. 現在のアイテム数と排出率</h2>
+      <p>
+        現在、本ガチャの排出アイテムは<strong id="itemCount"></strong>種類です。<br>
+        各アイテムの排出率は一律<strong id="itemRate"></strong>％となります。
+      </p>
+
+      <h2>3. 排出アイテム一覧</h2>
+      <ul id="itemList"><!-- リスト更新で自動的に上下 -->
+        <li>アイテム01</li>
+        <li>アイテム02</li>
+        <li>アイテム03</li>
+        <li>アイテム04</li>
+        <li>アイテム05</li>
+        <li>アイテム06</li>
+        <li>アイテム07</li>
+        <li>アイテム08</li>
+        <li>アイテム09</li>
+        <li>アイテム10</li>
+        <li>アイテム11</li>
+      </ul>
+
+      <h2>4. ダブり（重複）時の処理</h2>
+      <ul>
+        <li>既に所持しているアイテムが排出された場合、対象アイテムによっては<strong>色替えバージョン</strong>を獲得できます。</li>
+        <li>色替えを含めてすべてのアイテムを所持している場合、代わりに<strong>200コイン</strong>が返還されます。</li>
+      </ul>
+
+      <h2>5. コインについて</h2>
+      <ul>
+        <li>コインはゲーム内で獲得できる通貨です。</li>
+        <li>返還されるコインはガチャ利用時に消費するものと同一種類です。</li>
+      </ul>
+
+      <h2>6. 注意事項</h2>
+      <ul>
+        <li>提供割合は1回ごとの抽選に適用されます。</li>
+        <li>表示している排出率は小数点第2位まで表示（四捨五入）しています。</li>
+        <li>アイテム数の増減により排出率は自動的に変動します。</li>
+      </ul>
+
+      <p>最終更新日：2025年9月18日</p>
+    </div>
+  </div>
+
+  <script>
+    function updateGachaInfo() {
+      const items = document.querySelectorAll("#itemList li");
+      const count = items.length;
+      const rate = (100 / count).toFixed(2);
+      document.getElementById("itemCount").textContent = count;
+      document.getElementById("itemRate").textContent = rate;
+    }
+    updateGachaInfo();
+  </script>
+</body>
+</html>

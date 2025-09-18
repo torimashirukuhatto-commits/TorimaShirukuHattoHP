@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gacha Disclosure - GO!st.</title>
+  <link rel="stylesheet" href="style.css"> <!-- Load existing CSS -->
+  <style>
+    /* Language switch links */
+    .lang-switch {
+      text-align: right;
+      margin: 10px 20px;
+      font-size: 0.9em;
+    }
+    .lang-switch a {
+      margin-left: 10px;
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .lang-switch a:hover {
+      color: #0099cc;
+    }
+    /* Item list */
+    #itemList {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    #itemList li {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy_en.html">Privacy Policy</a>
+    <a href="provide_en.html">Gacha Disclosure</a>
+  </nav>
+
+  <!-- Language switch links -->
+  <div class="lang-switch">
+    <a href="provide.html">日本語</a> | 
+    <a href="provide_en.html">English</a>
+  </div>
+
+  <div class="container">
+    <h1>Gacha Disclosure</h1>
+    <div class="content-box">
+      <p>The disclosure of the permanent gacha in the app "GO!st." is as follows:</p>
+
+      <h2>1. Format</h2>
+      <p>This gacha is permanently available. There are no rarity categories, and all items have an equal chance of being obtained.</p>
+
+      <h2>2. Current number of items and rates</h2>
+      <p>
+        As of September 18, 2025, this gacha includes <strong id="itemCount"></strong> items.<br>
+        Each item has an equal appearance rate of <strong id="itemRate"></strong>%.
+      </p>
+
+      <h2>3. Item list</h2>
+      <ul id="itemList">
+        <li>Item 01</li>
+        <li>Item 02</li>
+        <li>Item 03</li>
+        <li>Item 04</li>
+        <li>Item 05</li>
+        <li>Item 06</li>
+        <li>Item 07</li>
+        <li>Item 08</li>
+        <li>Item 09</li>
+        <li>Item 10</li>
+        <li>Item 11</li>
+      </ul>
+
+      <h2>4. Duplicate handling</h2>
+      <ul>
+        <li>If an item you already own appears, you may receive a <strong>color variation</strong> of that item.</li>
+        <li>If you already own all items including color variations, you will instead receive <strong>200 coins</strong>.</li>
+      </ul>
+
+      <h2>5. Coins</h2>
+      <ul>
+        <li>Coins are an in-game currency obtained through gameplay.</li>
+        <li>The returned coins are the same type as those consumed when using the gacha.</li>
+      </ul>
+
+      <h2>6. Notes</h2>
+      <ul>
+        <li>The disclosure rate applies to each individual draw.</li>
+        <li>The displayed rates are rounded to two decimal places.</li>
+        <li>If the number of items changes, the rate will be updated automatically.</li>
+      </ul>
+
+      <p>Last updated: September 18, 2025</p>
+    </div>
+  </div>
+
+  <script>
+    function updateGachaInfo() {
+      const items = document.querySelectorAll("#itemList li");
+      const count = items.length;
+      const rate = (100 / count).toFixed(2);
+      document.getElementById("itemCount").textContent = count;
+      document.getElementById("itemRate").textContent = rate;
+    }
+    updateGachaInfo();
+  </script>
+</body>
+</html>

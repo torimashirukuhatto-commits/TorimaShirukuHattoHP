@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>ゲーム紹介サイト</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>/* 色変更など */
+  <style>
+    /* 色変更など */
     body {
       font-family: sans-serif;
       margin: 0;
@@ -82,6 +83,26 @@
       margin-bottom: 10px;
     }
 
+    /* ==== フッター ==== */
+    footer {
+      margin-top: 50px;
+      background: #ffffff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer a {
+      color: #0077b6;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
       nav a {
         display: block;
@@ -130,5 +151,13 @@
       </p>
     </div>
   </div>
+
+  <footer>
+    <p>
+      <a href="policy.html">プライバシーポリシー</a> | 
+      <a href="account-deletion.html">アカウント削除について</a>
+    </p>
+    <p>&copy; 2025 GO!st.</p>
+  </footer>
 </body>
 </html>
