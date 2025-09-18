@@ -3,55 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>お問い合わせ</title>
+  <link rel="stylesheet" href="style.css"> <!-- 他ページと同じCSSを使う -->
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background-color: #f0f8ff;
-      color: #333;
-    }
-    nav {
-      background: #222;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .content-box {
+    .contact-box {
       background: #fff;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
     }
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
+    .contact-box h1 {
+      margin-bottom: 20px;
     }
-    input, textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      box-sizing: border-box;
+    .contact-box p {
+      margin: 10px 0;
+      line-height: 1.6;
     }
-    button {
+    .email-link {
+      display: inline-block;
       margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: white;
-      border: none;
-      border-radius: 5px;
+      padding: 12px 24px;
+      background-color: #1e90ff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
+    }
+    .email-link:hover {
+      background-color: #0d74d1;
     }
   </style>
 </head>
@@ -64,22 +45,13 @@
   </nav>
 
   <div class="container">
-    <div class="content-box">
+    <div class="contact-box">
       <h1>お問い合わせ</h1>
-      <p>ご質問・ご意見などがあれば、以下のフォームからご連絡ください。</p>
-      <form>
-        <label for="name">お名前（任意）</label>
-        <input type="text" id="name" name="name">
-
-        <label for="email">メールアドレス（任意）</label>
-        <input type="email" id="email" name="email">
-
-        <label for="message">お問い合わせ内容</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">送信</button>
-      </form>
-    </div>
+      <p>申し訳ありませんが、現在フォームは準備中です。</p>
+      <p>以下のメールアドレスまでご連絡ください。</p>
+      <p>バグ報告・アカウント削除・その他のご要件もこちらで受け付けています。</p>
+      <p>torimashirukuhatto@gmail.com</p>
+      </div>
   </div>
 </body>
 </html>
