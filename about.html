@@ -3,30 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>作った人</title>
-  <link rel="stylesheet" href="style.css"> <!-- 共通CSS読み込み -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- 共通CSS -->
   <style>
-    /* ===== メンバーカード専用スタイル ===== */
+    /* ===== ページ固有上書き ===== */
+
     .team-info {
       margin-bottom: 30px;
     }
-
     .team-info h2 {
-      font-size: 1.8em; /* 見出し大きめ */
+      font-size: 1.8em;
+      color: #0077b6; /* 見出し色統一 */
     }
-
     .team-info p {
-      font-size: 1.1em; /* 本文少し大きめ */
+      font-size: 1.1em;
       line-height: 1.6;
-    }
-
-    /* スマホ用調整 */
-    @media (max-width: 600px) {
-      .team-info h2 {
-        font-size: 1.6em;
-      }
-      .team-info p {
-        font-size: 1em; /* ちゃんと読めるサイズに */
-      }
+      color: #000; /* 本文黒 */
     }
 
     .members {
@@ -34,30 +26,34 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
     .member-card {
       background: #ffffff;
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      /* ホバー効果削除したのでtransition不要 */
     }
-
     .member-card h3 {
       margin-top: 0;
-      color: #0077b6;
+      color: #0077b6; /* 名前見出しも青 */
     }
-
     .member-card p {
       margin: 5px 0;
+      color: #000;
+    }
+
+    /* スマホ微調整 */
+    @media (max-width: 480px) {
+      .team-info h2 { font-size: 1.6em; }
+      .team-info p, .member-card p { font-size: 1em; }
     }
   </style>
 </head>
 
 <body>
+  <!-- ===== ヘッダー ===== -->
   <nav>
-    <a href="index.html">ゲーム紹介</a>
-    <a href="about.html">作った人</a>
+    <a href="index.html">GO!st.</a>
+    <a href="about.html">作った人たち</a>
     <a href="contact.html">お問い合わせ</a>
     <a href="news.html">ニュース</a>
   </nav>
@@ -103,5 +99,14 @@
       </div>
     </div>
   </div>
+
+  <!-- ===== フッター ===== -->
+  <footer>
+    <p>
+      <a href="privacy.html">プライバシーポリシー</a> | 
+      <a href="contact.html">アカウント削除について</a>
+    </p>
+    <p>&copy; 2025 GO!st.</p>
+  </footer>
 </body>
 </html>

@@ -3,43 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>お問い合わせ</title>
-  <link rel="stylesheet" href="style.css"> <!-- 他ページと同じCSSを使う -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- 共通CSS -->
   <style>
+    /* ===== ページ固有上書き ===== */
+
     .contact-box {
-      background: #fff;
+      background: #ffffff;
       padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
       max-width: 700px;
       margin: auto;
       text-align: center;
     }
+
     .contact-box h1 {
       margin-bottom: 20px;
+      color: #0077b6;
+      font-size: 1.8em;
     }
+
     .contact-box p {
       margin: 10px 0;
       line-height: 1.6;
+      color: #000;
+      font-size: 1rem;
     }
+
     .email-link {
       display: inline-block;
       margin-top: 15px;
       padding: 12px 24px;
-      background-color: #1e90ff;
+      background-color: #0077b6;
       color: #fff;
-      border-radius: 8px;
+      border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.2s;
     }
     .email-link:hover {
-      background-color: #0d74d1;
+      background-color: #005f95;
+    }
+
+    /* モバイル微調整 */
+    @media (max-width: 480px) {
+      .container { padding: 16px; }
+      .contact-box { padding: 16px; border-radius: 8px; }
+      .contact-box h1 { font-size: 1.6em; }
+      nav { gap: 8px; padding: 8px; }
     }
   </style>
 </head>
+
 <body>
+  <!-- ===== ヘッダー ===== -->
   <nav>
-    <a href="index.html">ゲーム紹介</a>
-    <a href="about.html">作った人</a>
+    <a href="index.html">GO!st.</a>
+    <a href="about.html">作った人たち</a>
     <a href="contact.html">お問い合わせ</a>
     <a href="news.html">ニュース</a>
   </nav>
@@ -50,8 +71,21 @@
       <p>申し訳ありませんが、現在フォームは準備中です。</p>
       <p>以下のメールアドレスまでご連絡ください。</p>
       <p>バグ報告・アカウント削除・その他のご要件もこちらで受け付けています。</p>
-      <p>torimashirukuhatto@gmail.com</p>
-      </div>
+      <p>
+        <a class="email-link" href="mailto:torimashirukuhatto@gmail.com">
+          メールでお問い合わせ
+        </a>
+      </p>
+    </div>
   </div>
+
+  <!-- ===== フッター ===== -->
+  <footer>
+    <p>
+      <a href="privacy.html">プライバシーポリシー</a> | 
+      <a href="contact.html">アカウント削除について</a>
+    </p>
+    <p>&copy; 2025 GO!st.</p>
+  </footer>
 </body>
 </html>
