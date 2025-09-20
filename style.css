@@ -148,17 +148,6 @@ h1, h2 {
 
 /* ==== フッター ==== */
 /* 画面下フッター用レイアウト */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
-
-.container {
-  flex: 1;
-}
-
 
 footer {
   margin-top: 50px;
@@ -178,6 +167,18 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  flex: 1;
+}
+
 
 /* ==== レスポンシブ対応 ==== */
 @media (max-width: 600px) {
