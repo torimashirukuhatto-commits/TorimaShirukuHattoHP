@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Privacy Policy - GO!st.</title>
-  <link rel="stylesheet" href="style.css"> <!-- existing CSS -->
+  <title>Privacy Policy - GO!st.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- 共通CSS -->
   <style>
-    /* Language switch */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      background: #ffffff;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      white-space: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    nav a {
+      display: inline-block;
+      margin: 0 8px;
+      padding: 6px 8px;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: bold;
+    }
+    nav a:focus { outline: 2px solid #0077b6; outline-offset: 2px; }
+
     .lang-switch {
       text-align: right;
       margin: 10px 20px;
@@ -17,8 +44,46 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .lang-switch a:hover {
-      color: #0099cc;
+    .lang-switch a:hover { color: #0099cc; }
+
+    .container {
+      flex: 1;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1, h2 { color: #0077b6; margin-top: 0; }
+    p, li { color: #000; line-height: 1.6; }
+
+    .content-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      margin-top: auto;
+      background: #ffffff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+    footer a {
+      color: #0077b6;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .container { padding: 16px; }
+      nav { gap: 8px; padding: 8px; }
+      .content-box { padding: 16px; border-radius: 8px; }
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.2em; }
     }
   </style>
 </head>
