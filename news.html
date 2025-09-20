@@ -3,29 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>ニュース一覧</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- 共通CSS -->
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background-color: #f0f8ff;
-      color: #333;
-    }
-    nav {
-      background: #222;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+    /* ニュースページ専用の追加スタイル */
     .news-list {
       background: #fff;
       padding: 20px;
@@ -44,7 +25,7 @@
     .news-title {
       cursor: pointer;
       font-weight: bold;
-      color: #0066cc;
+      color: #0077b6;
     }
     .news-content {
       display: none;
@@ -54,13 +35,15 @@
   </style>
 </head>
 <body>
+  <!-- ナビゲーション -->
   <nav>
-    <a href="index.html">ゲーム紹介</a>
-    <a href="about.html">作った人</a>
+    <a href="index.html">GO!st.</a>
+    <a href="about.html">作った人たち</a>
     <a href="contact.html">お問い合わせ</a>
     <a href="news.html">ニュース</a>
   </nav>
 
+  <!-- メイン -->
   <div class="container">
     <div class="news-list">
       <h2>ニュース一覧</h2>
@@ -95,20 +78,23 @@
       </div>
 
       <div class="news-item">
-         <p class="news-date">日付</p>
-         <p class="news-title" onclick="toggleContent(this)">タイトル</p>
-         <div class="news-content">
-             <p>詳細文を書きます。<br>改行もOKです。</p>
-            </div>
+        <p class="news-date">日付</p>
+        <p class="news-title" onclick="toggleContent(this)">タイトル</p>
+        <div class="news-content">
+          <p>詳細文を書きます。<br>改行もOKです。</p>
         </div>
-
+      </div>
     </div>
-
-    
   </div>
 
-        
-
+  <!-- フッター -->
+  <footer>
+    <p>
+      <a href="privacy.html">プライバシーポリシー</a> | 
+      <a href="contact.html">アカウント削除について</a>
+    </p>
+    <p>&copy; 2025 GO!st.</p>
+  </footer>
 
   <script>
     function toggleContent(titleElement) {

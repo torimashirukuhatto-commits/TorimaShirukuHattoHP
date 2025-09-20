@@ -10,6 +10,25 @@
       margin-bottom: 30px;
     }
 
+    .team-info h2 {
+      font-size: 1.8em; /* 見出し大きめ */
+    }
+
+    .team-info p {
+      font-size: 1.1em; /* 本文少し大きめ */
+      line-height: 1.6;
+    }
+
+    /* スマホ用調整 */
+    @media (max-width: 600px) {
+      .team-info h2 {
+        font-size: 1.6em;
+      }
+      .team-info p {
+        font-size: 1em; /* ちゃんと読めるサイズに */
+      }
+    }
+
     .members {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -21,12 +40,7 @@
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .member-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      /* ホバー効果削除したのでtransition不要 */
     }
 
     .member-card h3 {
@@ -63,21 +77,18 @@
 
       <!-- メンバー紹介（カード形式） -->
       <div class="members">
-        <!-- メンバー1 -->
         <div class="member-card">
           <h3>アメリ</h3>
           <p><strong>担当：</strong> 企画 / ディレクション</p>
           <p><strong>コメント：</strong> 楽しいゲームになるように全力で考えました！</p>
         </div>
 
-        <!-- メンバー2 -->
         <div class="member-card">
           <h3>umiushi</h3>
           <p><strong>担当：</strong> プログラム</p>
           <p><strong>コメント：</strong> バグと戦いながらコードを書きました。</p>
         </div>
 
-        <!-- メンバー3 -->
         <div class="member-card">
           <h3>wawawa</h3>
           <p><strong>担当：</strong> デザイン</p>
@@ -89,8 +100,6 @@
           <p><strong>担当：</strong> モデル</p>
           <p><strong>コメント：</strong> キャラクターや世界観をかわいく仕上げました！</p>
         </div>
-
-
       </div>
     </div>
   </div>
