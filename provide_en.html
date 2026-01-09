@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gacha Disclosure - GO!st.</title>
+  <title>Gacha Drop Rates - GO!st.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css"> <!-- 共通CSS -->
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="image.png" type="image/png">
   <style>
     body {
@@ -33,7 +33,6 @@
       color: #0077b6;
       font-weight: bold;
     }
-    nav a:focus { outline: 2px solid #0077b6; outline-offset: 2px; }
 
     .lang-switch {
       text-align: right;
@@ -46,7 +45,6 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .lang-switch a:hover { color: #0099cc; }
 
     .container {
       flex: 1;
@@ -73,84 +71,88 @@
       font-size: 0.9em;
       box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
     }
-    footer a {
-      color: #0077b6;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    footer a:hover { text-decoration: underline; }
-
-    @media (max-width: 480px) {
-      .container { padding: 16px; }
-      nav { gap: 8px; padding: 8px; }
-      .content-box { padding: 16px; border-radius: 8px; }
-      h1 { font-size: 1.6em; }
-      h2 { font-size: 1.2em; }
-    }
   </style>
 </head>
 <body>
   <nav>
     <a href="index.html">Home</a>
-    <a href="privacy_en.html">Privacy Policy</a>
-    <a href="provide_en.html">Gacha Disclosure</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="provide_en.html">Gacha Rates</a>
   </nav>
 
-  <!-- Language switch links -->
+  <!-- Language Switch -->
   <div class="lang-switch">
     <a href="provide.html">日本語</a> | 
     <a href="provide_en.html">English</a>
   </div>
 
   <div class="container">
-    <h1>Gacha Disclosure</h1>
+    <h1>Gacha Drop Rates</h1>
     <div class="content-box">
-      <p>The disclosure of the permanent gacha in the app "GO!st." is as follows:</p>
-
-      <h2>1. Format</h2>
-      <p>This gacha is permanently available. There are no rarity categories, and all items have an equal chance of being obtained.</p>
-
-      <h2>2. Current number of items and rates</h2>
       <p>
-        As of September 18, 2025, this gacha includes <strong id="itemCount"></strong> items.<br>
-        Each item has an equal appearance rate of <strong id="itemRate"></strong>%.
+        The drop rates for the permanent gacha available in the application
+        <strong>“GO!st.”</strong> are disclosed below.
       </p>
 
-      <h2>3. Item list</h2>
+      <h2>1. Gacha Format</h2>
+      <p>
+        This gacha is permanently available.  
+        There are no rarity tiers, and all items are distributed with equal probability.
+      </p>
+
+      <h2>2. Current Number of Items and Drop Rate</h2>
+      <p>
+        There are currently <strong id="itemCount"></strong> items available in this gacha.<br>
+        Each item has an equal drop rate of <strong id="itemRate"></strong>%.
+      </p>
+
+      <h2>3. List of Available Items</h2>
       <ul id="itemList">
-        <li>Item 01</li>
-        <li>Item 02</li>
-        <li>Item 03</li>
-        <li>Item 04</li>
-        <li>Item 05</li>
-        <li>Item 06</li>
-        <li>Item 07</li>
-        <li>Item 08</li>
-        <li>Item 09</li>
-        <li>Item 10</li>
-        <li>Item 11</li>
+        <li>Small Angel</li>
+        <li>Little Mustache</li>
+        <li>Ribbon</li>
+        <li>Bow Tie</li>
+        <li>Straight Bunny</li>
+        <li>Cute Cat</li>
+        <li>Mini Hat</li>
+        <li>Dot Glasses</li>
+        <li>Stuck Axe</li>
+        <li>Pointy Horns</li>
+        <li>Wizard Hat</li>
+        <li>Summer Watermelon</li>
+        <li>Sparkling Space</li>
+        <li>Bat Wings</li>
+        <li>Bat Tail</li>
+        <li>Angel Halo</li>
       </ul>
 
-      <h2>4. Duplicate handling</h2>
+      <h2>4. Duplicate Items</h2>
       <ul>
-        <li>If an item you already own appears, you may receive a <strong>color variation</strong> of that item.</li>
-        <li>If you already own all items including color variations, you will instead receive <strong>200 coins</strong>.</li>
+        <li>
+          If an item you already own is obtained, you may receive a
+          <strong>color variation</strong> of that item, depending on the item.
+        </li>
+        <li>
+          If you already own all items including all color variations,
+          <strong>200 Coins</strong> will be refunded instead.
+        </li>
       </ul>
 
-      <h2>5. Coins</h2>
+      <h2>5. About Coins</h2>
       <ul>
-        <li>Coins are an in-game currency obtained through gameplay.</li>
-        <li>The returned coins are the same type as those consumed when using the gacha.</li>
+        <li>Coins are an in-game currency that can be earned through gameplay.</li>
+        <li>The refunded coins are the same type as those used for the gacha.</li>
+        <li>Currently, coins can be earned by playing the game and defeating enemies.</li>
       </ul>
 
       <h2>6. Notes</h2>
       <ul>
-        <li>The disclosure rate applies to each individual draw.</li>
-        <li>The displayed rates are rounded to two decimal places.</li>
-        <li>If the number of items changes, the rate will be updated automatically.</li>
+        <li>Drop rates apply to each individual gacha draw.</li>
+        <li>Displayed rates are rounded to two decimal places.</li>
+        <li>Drop rates are automatically adjusted when the number of items changes.</li>
       </ul>
 
-      <p>Last updated: September 18, 2025</p>
+      <p>Last Updated: January 9, 2026</p>
     </div>
   </div>
 
